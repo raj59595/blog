@@ -1,5 +1,4 @@
-
-<p>
+ <p>
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
@@ -9,7 +8,6 @@
   <%= @article.text %>
 </p>
 
-
 <h2>Comments</h2>
 <%= render @article.comments %>
 
@@ -17,6 +15,26 @@
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
+<h2>Topics</h2>
+<%= render @article.my_topics %>
+ 
 
-<%= link_to 'Edit', edit_article_path(@article) %> 
+<h2>Add a topic:</h2>
+<%= render 'my_topics/form' %>
+
+
+
+<h2>Add a tag:</h2>
+<%= render 'articles/add_tag' %>
+
+
+	<p>
+		<strong>Tags:</strong>
+		<% @article.tags.each do |tag| %>
+		<p><%= tag.title %></p>
+		<% end %>
+	</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %>
 <%= link_to 'Back', articles_path %>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TopicsControllerTest < ActionDispatch::IntegrationTest
+class ArticleTagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

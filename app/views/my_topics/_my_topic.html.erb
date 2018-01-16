@@ -1,0 +1,11 @@
+<p>
+  <strong>Name:</strong>
+  <%= my_topic.name %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Topic', [my_topic.article, my_topic],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+ 
+</p>

@@ -1,0 +1,12 @@
+<%= form_tag article_tag_path do %>
+
+<div>
+	<%= select_tag 'tag_id', options_for_select(@tags.collect{ |u| [u.title, u.id] }) %>
+</div>
+
+<p>
+	<%= submit_tag 'submit' %>
+</p>
+
+<% end %>
+
